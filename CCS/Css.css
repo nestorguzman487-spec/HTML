@@ -46,14 +46,28 @@ nav li a {
     text-decoration: none; 
     transition: background-color 0.3s; 
     }
+ /* azul celeste */            /* opcional, para que se lea mejor */
 }
 
+header nav li a:hover {
+    background-color: #00A8E1;
+    }
 
+.Imagenes_Aplicaciones {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Imagenes_Aplicaciones img {
+    width: 150px;
+    margin-right: 20px;
+}
 
 
 nav{
     h2{
-    color: #00A8E1; 
+    color: rgb(0, 168, 225); 
     letter-spacing: 1.5px; 
     margin-bottom: 15px;
     }
@@ -61,7 +75,8 @@ nav{
         width: 200px; 
         height: auto;
         display: block;
-        margin: 0 auto 10px; 
+        margin: 5px 5px 5px; 
+        p{color: white;}
     }
 }
 
@@ -70,26 +85,56 @@ nav{
 footer {
     background-color: #222;
     color: #ffffff; 
-    padding: 20px 0;
+    padding: 0;
     margin-top: auto; 
     text-align: center;
-    p{Color: white;}
+    p{color: white;}
 }
 
 .contenido-footer {
     display: flex; 
     justify-content: center;
     align-items: center;
-    gap: 15px; 
+    gap: 20spx; 
+    box-shadow: 1px -2px 3px #00A8E1;
 }
 
 
 .contenido-footer img {
     cursor: pointer;
     transition: transform 0.2s; 
+    margin: 0 3px;
 }
 
 .contenido-footer img:hover {
     transform: scale(1.2);
     filter: brightness(1.2); 
+}
+
+.artista {
+    position: relative;
+    display: inline-block;
+}
+
+.artista img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+
+.texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.artista:hover .texto {
+    opacity: 1;
 }
